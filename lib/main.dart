@@ -138,27 +138,30 @@ class _ShowcasePageState extends State<ShowcasePage> {
                 padding: const EdgeInsets.all(24),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
-                  spacing: 8,
+                  // Explicit gaps rather than `Column.spacing`, which needs
+                  // Flutter 3.27+ (this project targets 3.22.2).
                   children: [
                     Text(
                       'Digit Installer Workspace',
                       style: Theme.of(context).textTheme.headlineMedium,
                     ),
+                    const SizedBox(height: 8),
                     const Text(
                       'A self-hosted APK auto-updater for Flutter, showcased right here.',
                       textAlign: TextAlign.center,
                     ),
-                    SizedBox(height: 32),
+                    const SizedBox(height: 48),
                     Text(
                       'Sample text for the version 1.0.0 release, which is the first release of this app.',
                       style: Theme.of(context).textTheme.titleSmall,
                       textAlign: TextAlign.center,
                     ),
+                    const SizedBox(height: 8),
                     Text(
                       'Current Version ${info.version} (Build ${info.buildNumber})',
                       style: Theme.of(context).textTheme.titleMedium,
                     ),
-                    const SizedBox(height: 32),
+                    const SizedBox(height: 48),
                     ConstrainedBox(
                       constraints: const BoxConstraints(maxWidth: 360),
                       child: Card(

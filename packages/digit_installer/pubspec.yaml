@@ -8,20 +8,20 @@ version: 0.1.0
 homepage: https://justunknown.com
 
 environment:
-  sdk: ^3.12.2
+  sdk: ^3.4.3
   flutter: ">=3.3.0"
 
 dependencies:
   flutter:
     sdk: flutter
   plugin_platform_interface: ^2.1.8
-  just_downloader: ^0.1.0
+  digit_downloader: ^0.1.0
   http: ^1.2.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^6.0.0
+  flutter_lints: ^4.0.0
 
 flutter:
   plugin:
@@ -38,3 +38,4 @@ flutter:
         dartPluginClass: DigitInstallerDesktop
       linux:
         dartPluginClass: DigitInstallerDesktop
+

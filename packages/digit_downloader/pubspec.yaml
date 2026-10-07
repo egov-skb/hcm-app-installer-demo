@@ -1,0 +1,39 @@
+name: digit_downloader
+description: >
+  A generic background resumable/chunked download engine for Dart & Flutter —
+  HTTP Range-based chunking, pause/resume that survives app restarts,
+  streaming SHA-256 checksum verification, and TLS certificate pinning.
+version: 0.1.0
+homepage: https://justunknown.com
+
+environment:
+  sdk: ^3.4.3
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.2.0
+  crypto: ^3.0.3
+  path_provider: ^2.1.0
+  just_storage: ^1.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  # Native side of BackgroundDownloadMode.systemManaged (see
+  # lib/src/models/background_download_mode.dart) — an Android foreground
+  # Service / iOS background URLSession that keeps a download running (and
+  # shows its progress in a notification) even if the app process is
+  # killed outright. BackgroundDownloadMode.appLifecycle (the default)
+  # never touches this native code at all.
+  plugin:
+    platforms:
+      android:
+        package: com.egov.digit_downloader
+        pluginClass: DigitDownloaderPlugin
+      ios:
+        pluginClass: DigitDownloaderPlugin

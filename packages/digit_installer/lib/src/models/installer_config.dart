@@ -1,4 +1,4 @@
-import 'package:just_downloader/just_downloader.dart'
+import 'package:digit_downloader/digit_downloader.dart'
     show BackgroundDownloadMode, CertificatePinSet;
 
 import 'install_mode.dart';
@@ -55,6 +55,6 @@ class DigitInstallerConfig {
   /// backgrounded ([BackgroundDownloadMode.appLifecycle], the default) or
   /// fully killed ([BackgroundDownloadMode.systemManaged], which also
   /// shows a live progress notification). Passed straight through to the
-  /// underlying `just_downloader` request.
+  /// underlying `digit_downloader` request.
   final BackgroundDownloadMode backgroundDownloadMode;
 }

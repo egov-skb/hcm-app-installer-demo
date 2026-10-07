@@ -1,0 +1,23 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.egov.digit_downloader">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <!-- API 33+: needed to show the download-progress notification. -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application>
+        <!--
+          BackgroundDownloadMode.systemManaged's engine. A foreground service
+          (not WorkManager) so the chunked-download loop has direct control
+          over the destination file and can show live progress, the same
+          way any download-manager-style app does. dataSync is the API 34+
+          required foreground-service type for this kind of transfer.
+        -->
+        <service
+            android:name=".BackgroundDownloadService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
+    </application>
+</manifest>

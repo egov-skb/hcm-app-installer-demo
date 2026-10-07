@@ -14,7 +14,7 @@ A modern, self-hosted APK auto-updater for Flutter.
   verification before a single byte is installed.
 - **Background resumable, chunked downloads** with pause/resume that
   survives app restarts (via the companion
-  [`just_downloader`](https://pub.dev/packages/just_downloader) package).
+  [`digit_downloader`](https://pub.dev/packages/digit_downloader) package).
 - Works without any dependency on Google Play Store or Play Services —
   bring your own hosting (GitHub Releases, your own backend, etc).
 

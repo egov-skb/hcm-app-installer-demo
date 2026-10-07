@@ -1,5 +1,5 @@
 dependency_overrides:
   digit_installer:
     path: packages/digit_installer
-  just_downloader:
-    path: packages/just_downloader
+  digit_downloader:
+    path: packages/digit_downloader

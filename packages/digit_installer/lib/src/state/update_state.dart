@@ -1,4 +1,4 @@
-import 'package:just_downloader/just_downloader.dart' show DownloadProgress;
+import 'package:digit_downloader/digit_downloader.dart' show DownloadProgress;
 
 import '../models/update_manifest.dart';
 import 'update_failure.dart';
@@ -38,7 +38,7 @@ final class UpdateInitializing extends UpdateState {
   const UpdateInitializing();
 }
 
-/// Carries [DownloadProgress] straight from `just_downloader` rather than a
+/// Carries [DownloadProgress] straight from `digit_downloader` rather than a
 /// redefined duplicate — the download engine lives there, this package only
 /// orchestrates it.
 final class UpdateDownloading extends UpdateState {

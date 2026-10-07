@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
-import 'package:just_downloader/just_downloader.dart' as downloads;
+import 'package:digit_downloader/digit_downloader.dart' as downloads;
 import 'package:digit_installer/digit_installer.dart';
 
 class _FakeDownloader implements downloads.Downloader {

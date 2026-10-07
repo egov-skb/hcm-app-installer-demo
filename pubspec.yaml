@@ -37,8 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.6
 
   digit_installer: ^0.1.0
-  just_downloader: ^0.1.0
-  package_info_plus: ^10.2.1
+  digit_downloader: ^0.1.0
+  package_info_plus: ^8.0.2
   shelf: ^1.4.0
   shelf_router: ^1.1.0
   crypto: ^3.0.3

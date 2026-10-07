@@ -4,7 +4,7 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:http/http.dart' as http;
-import 'package:just_downloader/just_downloader.dart' as downloads;
+import 'package:digit_downloader/digit_downloader.dart' as downloads;
 
 import 'models/install_mode.dart';
 import 'models/installer_config.dart';
@@ -25,7 +25,7 @@ import 'state/update_state.dart';
 /// can render the whole lifecycle with an exhaustive `switch`.
 class DigitInstaller {
   DigitInstaller(this.config, {downloads.Downloader? downloader, http.Client? httpClient})
-    : _downloader = downloader ?? downloads.JustDownloader(),
+    : _downloader = downloader ?? downloads.DigitDownloader(),
       _httpClient = httpClient ?? http.Client();
 
   final DigitInstallerConfig config;

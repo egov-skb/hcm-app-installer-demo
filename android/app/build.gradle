@@ -38,7 +38,9 @@ android {
         applicationId = "com.example.hcm_app_installer"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
-        minSdk = flutter.minSdkVersion
+        // digit_installer and digit_downloader both require API 24, above
+        // Flutter 3.22's default of 21.
+        minSdk = 24
         targetSdk = flutter.targetSdkVersion
         versionCode = flutterVersionCode.toInteger()
         versionName = flutterVersionName

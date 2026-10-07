@@ -1,4 +1,4 @@
 # melos_managed_dependency_overrides: attendance_management,dart_mappable_builder,digit_data_model,digit_dss,digit_firebase_services,digit_location_tracker,digit_scanner,digit_showcase,survey_form,sync_service,transit_post,digit_crud_bloc,digit_data_converter,digit_flow_builder,digit_forms_engine,digit_formula_parser
 dependency_overrides:
-  just_downloader:
-    path: ../just_downloader
+  digit_downloader:
+    path: ../digit_downloader
