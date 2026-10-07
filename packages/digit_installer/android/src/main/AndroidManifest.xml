@@ -1,0 +1,33 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.egov.digit_installer">
+
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!-- Needed on API 33+ to show the "tap to reopen" notification after an
+         update installs — see PostInstallRelaunchReceiver. -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application>
+        <!--
+          Declared statically (not context-registered) so it survives the app
+          backgrounding/dying during the few seconds after the user confirms
+          the install in the system dialog.
+        -->
+        <receiver
+            android:name=".InstallResultReceiver"
+            android:exported="false" />
+
+        <!--
+          ACTION_MY_PACKAGE_REPLACED is a protected system broadcast — only
+          the OS can send it, so exported="true" here doesn't allow other
+          apps to trigger this. Needed because it must reach the app even
+          when nothing is running to register a receiver dynamically.
+        -->
+        <receiver
+            android:name=".PostInstallRelaunchReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>
